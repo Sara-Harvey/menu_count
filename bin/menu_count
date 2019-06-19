@@ -1,3 +1,5 @@
 #!/usr/bin/env  ruby
 
-puts "Hello guys!"
+require './lib/menu_count
+
+MenuCount::Cli::new.start
