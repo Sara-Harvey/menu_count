@@ -1,6 +1,2 @@
-require "menu_count/version"
-
-module MenuCount
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative "./menu_count/version"
+require_relative './menu_count/cli'
