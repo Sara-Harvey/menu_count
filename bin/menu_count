@@ -3,10 +3,6 @@
 require 'nokogiri'
 require 'open-uri'
 
-#require 'pry'
-#require 'require_all'
-#require_all 'lib'
-
-Dir["/development/menu_count*.rb"].each {|file| require file }
+require './lib/menu_count'
 
 MenuCount.start

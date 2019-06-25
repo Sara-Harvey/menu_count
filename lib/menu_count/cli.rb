@@ -1,7 +1,8 @@
 require 'colorize'
+require './lib/menu_count/scraper.rb'
+require './lib/menu_count/category.rb'
 
-
-class MenuCount::Cli
+class MenuCount::CLI
 
 def see_categories
   puts "Check out the calorie counts at McDonalds!".blue.bold
@@ -44,7 +45,7 @@ end
 def display_categories
  MenuCount::Category.all.each.with_index(1) do |value, index|
   puts "#{index}. #{value.name}"
-  end
+end
 
 def see_items
   puts ""
