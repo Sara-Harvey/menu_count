@@ -1,8 +1,6 @@
 # MenuCount
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/menu_count`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome! Thank you for exploring this gem. It was created as a caloric guide to McDonald's fast food menu, and to satisfy your curiosity about the fattiest and fittest items.
 
 ## Installation
 
@@ -22,8 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Type the below and follow the on screen prompts.
 
+$ menu_count
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
