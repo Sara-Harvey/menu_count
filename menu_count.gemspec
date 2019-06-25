@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Ranking MdDonalds menu items by category and calories"
   s.authors     = ["Sara Harvey"]
   s.email       = 'saraharveynyc@gmail.com'
-  s.files       = ["bin/menu_count", "lib/menu_count.rb", "lib/menu_count/cli.rb", "lib/menu_count/category.rb", "lib/menu_count/scraper.rb"]
+  s.files       = ["bin/menu_count", "lib/menu_count.rb", "lib/menu_count/cli.rb", "lib/menu_count/category.rb", "lib/menu_count/scraper.rb", "spec_helper.rb", "spec/menu_count_spec.rb"]
   s.homepage    =
     'https://rubygems.org/gems/menu_count'
   s.license       = 'MIT'
