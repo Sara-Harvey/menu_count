@@ -1,8 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'nokogiri'
-require 'open-uri'
-
 require './lib/menu_count'
 
-MenuCount.start
+MenuCount::CLI.new.see_categories
