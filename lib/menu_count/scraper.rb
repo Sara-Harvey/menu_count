@@ -4,8 +4,6 @@ require 'colorize'
 
 
 class Scraper
-  #def initialize
-  #end
 
   def self.scrape_categories
     page = Nokogiri::HTML(open("https://www.mcdonalds.com/us/en-us/full-menu.html"))
@@ -20,7 +18,7 @@ class Scraper
   end
 
   def self.scrape_items(number)
-    link = Category.links[number.to_i - 1]
+    link = Category.all[number.to_i - 1].link
 
     page = Nokogiri::HTML(open("https://www.mcdonalds.com" + link))
     items = []
