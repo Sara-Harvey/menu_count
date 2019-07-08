@@ -1,4 +1,4 @@
- require 'colorize'
+require 'colorize'
 require './lib/menu_count/scraper.rb'
 require './lib/menu_count/category.rb'
 
