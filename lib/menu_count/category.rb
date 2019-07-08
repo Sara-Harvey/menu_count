@@ -1,4 +1,4 @@
-class MenuCount::Category
+class Category
   attr_accessor :name, :link
   
   @@all = []

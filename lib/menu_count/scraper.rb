@@ -2,9 +2,10 @@ require 'nokogiri'
 require 'open-uri'
 require 'colorize'
 
-class MenuCount::Scraper
-  def initialize
-  end
+
+class Scraper
+  #def initialize
+  #end
 
   def self.scrape_categories
     page = Nokogiri::HTML(open("https://www.mcdonalds.com/us/en-us/full-menu.html"))
@@ -19,7 +20,7 @@ class MenuCount::Scraper
   end
 
   def self.scrape_items(number)
-    link = MenuCount::Category.links[number.to_i - 1]
+    link = Category.links[number.to_i - 1]
 
     page = Nokogiri::HTML(open("https://www.mcdonalds.com" + link))
     items = []
@@ -39,4 +40,4 @@ class MenuCount::Scraper
 
 end
 
-MenuCount::Scraper.scrape_categories
+Scraper.scrape_categories

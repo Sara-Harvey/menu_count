@@ -39,12 +39,12 @@ module MenuCount
     end
 
     def make_categories
-      category_array = MenuCount::Scraper.scrape_categories
-      MenuCount::Category.break_out_hashes(category_array)
+      category_array = Scraper.scrape_categories
+      Category.break_out_hashes(category_array)
     end
 
     def display_categories
-      MenuCount::Category.all.each.with_index(1) do |value, index|
+      Category.all.each.with_index(1) do |value, index|
       puts "#{index}. #{value.name}"
     end
 
@@ -56,7 +56,7 @@ module MenuCount
     
       case(number)
         when '1'..'13'
-          MenuCount::Scraper.scrape_items(number)
+          Scraper.scrape_items(number)
         when "exit"
           puts "Thanks for visiting!".blue.bold
           see_hamburger
