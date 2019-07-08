@@ -1,4 +1,4 @@
-require 'colorize'
+ require 'colorize'
 require './lib/menu_count/scraper.rb'
 require './lib/menu_count/category.rb'
 
@@ -30,6 +30,7 @@ module MenuCount
           make_categories
           display_categories
           see_items
+          more_categories
         when "N"
           puts "Thanks for visiting!".blue.bold
           see_hamburger
@@ -65,6 +66,24 @@ module MenuCount
         end
       end
     end
+    
+    def more_categories
+      puts "Would you like to see the categories again? Y or N."
+      more = gets.strip
+      puts ""
+      
+      case(more)
+        when "Y"
+          display_categories
+          see_items
+          more_categories
+        when "N"      
+          puts "Thanks for visiting!".blue.bold
+          see_hamburger
+        else 
+          more_categories
+    end
+  end
 
     def see_hamburger
             puts "
