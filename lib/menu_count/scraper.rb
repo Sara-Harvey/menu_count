@@ -1,8 +1,3 @@
-require 'nokogiri'
-require 'open-uri'
-require 'colorize'
-
-
 class Scraper
 
   def self.scrape_categories
@@ -38,4 +33,4 @@ class Scraper
 
 end
 
-Scraper.scrape_categories
+#Scraper.scrape_categories
