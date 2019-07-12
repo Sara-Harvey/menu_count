@@ -8,7 +8,7 @@ class Item
     #@name = name
     #@calories = calories
     
-    #category.add_item(self)
+    Category.add_item(self)
     @@all << self  
   end
 

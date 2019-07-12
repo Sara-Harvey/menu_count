@@ -9,6 +9,10 @@ class Category
     @@all << self  
   end
 
+  def add_item(item)
+    items << item 
+  end
+
   def self.all
     @@all
   end
