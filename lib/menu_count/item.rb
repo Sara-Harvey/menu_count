@@ -4,7 +4,7 @@ class Item
   
   @@all = []
 
-  def initialize(sorted_list)
+  def initialize(object)
     sorted_list.each {|k, v| self.send(("#{k}="), v)}  
     
     category.add_item(self)
