@@ -29,6 +29,7 @@ class Scraper
     sorted_list = items.sort_by {|item_hash| item_hash[:calories]}
     puts "hey hey hey" #sorted_list.values.push("\n")
     end
+  end
   
 =begin
     #formatted_list = sorted_list.each do |list|
