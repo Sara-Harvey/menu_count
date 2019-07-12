@@ -18,20 +18,28 @@ class Scraper
     
     page = Nokogiri::HTML(open("https://www.mcdonalds.com" + link))
     items = []
-
+    
     page.css(".categories-item-details").each do |item|
     items << {
       :name => item.css(".categories-item-name").text.strip.blue,
       :calories => item.css(".categories-item-calories").text.strip,
       :category => category}
     end
-        
-    list = items.sort_by {|item_hash| item_hash[:calories]}
-
-    output = list.each do |sorted_list|
-      Item.new(sorted_list)
-      end
-    output.values.push("\n")
+    puts items 
   end
+  
+    #items.each do |item_hash|
+    # Item.new(item_hash)
+    #end
+    #puts Item.all
+     
+    #end
+    #sorted_list = items.sort_by {|item_hash| item_hash[:calories]}
 
+    #sorted_list.each do |list|
+      #Item.new(list)
+      #end
+      #output
+      #.values.push("\n")
+    #end
 end
