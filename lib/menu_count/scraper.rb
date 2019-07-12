@@ -28,10 +28,10 @@ class Scraper
         
     list = items.sort_by {|item_hash| item_hash[:calories]}
 
-    list.each do |sorted_list|
-      sorted_list.values.push("\n") &&
+    output = list.each do |sorted_list|
       Item.new(sorted_list)
-    end
+      end
+    output.values.push("\n")
   end
 
 end
