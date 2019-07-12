@@ -4,8 +4,8 @@ class Item
   
   @@all = []
 
-  def initialize(item_hash)
-    item_hash.each {|k, v| self.send(("#{k}="), v)}  
+  def initialize(sorted_list)
+    sorted_list.each {|k, v| self.send(("#{k}="), v)}  
     
     category.add_item(self)
     @@all << self  
