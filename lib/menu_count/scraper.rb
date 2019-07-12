@@ -30,17 +30,11 @@ class Scraper
       Item.new(hash)
     end
       
-      item_list = Item.all 
-      item_list.each do |object|
+      Item.all.each do |object|
         puts object.name
         puts object.calories
         puts ""
-    end  
     end
-end    
-          
+    end
     
-    #sorted_list = items.sort_by {|item_hash| item_hash[:calories]}
-    #sorted_list.each do |hash|
-      #Item.new(hash)      
-      #puts hash.values.push("\n")
+end    
