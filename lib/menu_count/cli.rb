@@ -77,7 +77,10 @@ module MenuCount
           display_categories
           see_items
           more_categories
-        when "N"      
+        when "N"  
+          puts "Thanks for visiting!".blue.bold
+          see_hamburger
+        when "exit"  
           puts "Thanks for visiting!".blue.bold
           see_hamburger
         else 
