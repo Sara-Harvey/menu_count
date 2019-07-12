@@ -30,7 +30,8 @@ class Scraper
       Item.new(hash)
     end
       
-      Item.all.each do |object|
+      output = Item.all.sort_by {|object| object.calories}
+      output.each do |object|
         puts object.name
         puts object.calories
         puts ""
