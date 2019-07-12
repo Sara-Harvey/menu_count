@@ -15,9 +15,6 @@ class Scraper
   def self.scrape_items(number)
     category = Category.all[number.to_i - 1]
     link = category.link
-
-    
-    puts "SCRAPING FOR #{link}"
     
     page = Nokogiri::HTML(open("https://www.mcdonalds.com" + link))
     items = []
@@ -33,8 +30,12 @@ class Scraper
     list = items.sort_by {|item_hash| item_hash[:calories]}
 
     list.each do |sorted_list|
-      #puts sorted_list.values.push("\n")
       Item.new(sorted_list)
+      
+      
+      #puts sorted_list.values.push("\n")
+
+      #end
     end
   end
 

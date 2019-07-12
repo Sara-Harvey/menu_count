@@ -3,7 +3,7 @@ class Item
   
   @@all = []
 
-  def initialize(hash)
+  def initialize(sorted_list)
     hash.each {|k, v| self.send(("#{k}="), v)}  
     #@name = name
     #@calories = calories
