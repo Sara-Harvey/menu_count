@@ -1,13 +1,11 @@
 class Category
-  attr_accessor :name, :link
+  attr_accessor :name, :link, :items
   
   @@all = []
 
   def initialize(hash)
     hash.each {|k, v| self.send(("#{k}="), v)}  
-    @link = link
-    @name = name
-
+    @items = []
     @@all << self  
   end
 

@@ -14,7 +14,8 @@ class Scraper
 
   def self.scrape_items(number)
     link = Category.all[number.to_i - 1].link
-
+    puts "SCRAPING FOR #{link}"
+    
     page = Nokogiri::HTML(open("https://www.mcdonalds.com" + link))
     items = []
 
@@ -32,5 +33,3 @@ class Scraper
   end
 
 end
-
-#Scraper.scrape_categories
