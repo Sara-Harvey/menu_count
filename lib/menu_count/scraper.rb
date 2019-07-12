@@ -25,17 +25,12 @@ class Scraper
       :calories => item.css(".categories-item-calories").text.strip,
       :category => category}
     end
-
         
     list = items.sort_by {|item_hash| item_hash[:calories]}
 
     list.each do |sorted_list|
+      sorted_list.values.push("\n") &&
       Item.new(sorted_list)
-      
-      
-      #puts sorted_list.values.push("\n")
-
-      #end
     end
   end
 
