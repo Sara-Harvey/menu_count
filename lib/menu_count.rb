@@ -1,7 +1,6 @@
 require "colorize"
 require 'nokogiri'
 require 'open-uri'
-require 'pry'
 require_relative "./menu_count/version"
 require_relative "./menu_count/cli"
 require_relative "./menu_count/scraper"
